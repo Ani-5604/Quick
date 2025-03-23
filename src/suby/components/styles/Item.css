@@ -1,0 +1,55 @@
+.itemSection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .gallery {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+    margin: 10px;
+  }
+  
+  .gallery img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+  
+  .itemDetails {
+    margin-top: 10px;
+  }
+  
+  .itemPrice {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .buttonGroup {
+    margin-top: 8px;
+  }
+  
+  .addToCartBtn,
+  .buyBtn {
+    padding: 8px 12px;
+    margin: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .addToCartBtn:hover,
+  .buyBtn:hover {
+    background-color: #0056b3;
+  }
+  

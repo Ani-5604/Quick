@@ -1,0 +1,93 @@
+.mediaChainSection {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .loaderSection {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .loader {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  .chainTitle {
+    text-align: center;
+    font-size: 2rem;
+    margin: 10px 0;
+    color: #e15b64;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  .btnSection {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  
+  .btnSection button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  .btnIcons {
+    font-size: 2rem;
+    color: #e15b64;
+    transition: transform 0.3s ease;
+  }
+  
+  .btnIcons:hover {
+    transform: scale(1.2);
+  }
+  
+  .chainSection {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+  }
+  
+  .vendorBox {
+    display: inline-block;
+    margin: 0 10px;
+    min-width: 200px;
+    transition: transform 0.3s ease;
+  }
+  
+  .vendorBox:hover {
+    transform: scale(1.05);
+  }
+  
+  .firmImage {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .firmImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .topimg {
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .topimg:hover {
+    transform: scale(1.1);
+  }
+  
