@@ -7,13 +7,15 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Top Bar Section */
 .topBarSection {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
+    color: white;
     position: fixed;
     width: 100%;
     top: 0;
@@ -21,20 +23,30 @@ body {
 }
 
 .companyTitle h2 {
-    color: #2c7a7b;
+    color: white;
     margin: 0;
     font-weight: 600;
 }
 
-.itemSection {
-    margin-top: 80px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-    justify-content: center;
+.searchBar input {
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    width: 250px;
 }
 
+.userAuth {
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.userAuth:hover {
+    transform: scale(1.1);
+}
+
+/* Button Styles */
 .button {
     background-color: #2c7a7b;
     color: white;
@@ -49,24 +61,106 @@ body {
     background-color: #285e5e;
 }
 
-.card {
+.addButton, .cartButton, .buyButton {
+    padding: 8px 12px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.addButton:hover, .cartButton:hover, .buyButton:hover {
+    background-color: #005f73;
+}
+
+/* Card Styles */
+.card, .vendorBox, .firmGroupBox, .productBox {
     background-color: white;
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin: 10px;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+.card:hover, .vendorBox:hover, .firmGroupBox:hover, .productBox:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-img {
+/* Image and Gallery */
+img, .gallery img {
     max-width: 100%;
     border-radius: 8px;
+    transition: opacity 0.3s ease;
 }
 
+.gallery {
+    position: relative;
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    background-color: #f5f5f5;
+    overflow: hidden;
+}
+
+.gallery:hover img {
+    opacity: 0.85;
+}
+
+.gallery:hover {
+    transform: scale(1.05);
+}
+
+/* Item and Product Sections */
+.itemSection, .productSection, .firmSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: #f4f4f4;
+}
+
+.productGroup, .buttonGroup {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+.productGroup img, .firmGroup img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 0.5rem;
+}
+
+/* Text and Heading */
+h3 {
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 1.8rem;
+    color: #ff6a00;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.price {
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.firmDetails, .productBox div {
+    margin: 0.2rem 0;
+    color: #333;
+}
+
+/* Footer */
 footer {
     background-color: #2c7a7b;
     color: white;
@@ -75,351 +169,43 @@ footer {
     margin-top: 20px;
 }
 
-@media (max-width: 768px) {
-    .topBarSection {
-        padding: 10px 20px;
-    }
-
-    .itemSection {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .button {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-}
-.topBarSection {
-    background: linear-gradient(135deg, #ff6a00, #ee0979);
-    color: white;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .searchBar input {
-    padding: 0.5rem;
-    border-radius: 8px;
-    border: none;
-    outline: none;
-    width: 250px;
-  }
-  
-  .userAuth {
-    cursor: pointer;
-    font-weight: bold;
-    transition: transform 0.3s;
-  }
-  
-  .userAuth:hover {
-    transform: scale(1.1);
-  }
-  .mediaChainSection {
-    padding: 2rem;
-  }
-  
-  .vendorBox {
-    background: white;
-    border-radius: 10px;
-    margin: 1rem;
-    padding: 1rem;
-    transition: transform 0.3s;
-  }
-  
-  .vendorBox:hover {
-    transform: scale(1.05);
-  }
-  
-  .btnSection button {
-    background: #ff6a00;
-    border: none;
-    padding: 0.5rem;
-    margin: 0.5rem;
-    color: white;
-    border-radius: 50%;
-    transition: background 0.3s;
-  }
-  
-  .btnSection button:hover {
-    background: #ee0979;
-  }
-  .itemSection {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
-    padding: 1rem;
-  }
-  
-  .gallery {
-    transition: transform 0.3s;
-    border-radius: 12px;
-  }
-  
-  .gallery:hover {
-    transform: scale(1.05);
-  }
-  
-  .gallery img {
-    width: 100%;
-    border-radius: 12px;
-  }
-  .productSection {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    padding: 1rem;
-    background: #f8f8f8;
-  }
-  
-  h3 {
-    text-align: center;
-    margin: 1rem 0;
-    font-size: 1.8rem;
-    color: #ff6a00;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  }
-  
-  .productBox {
-    background: white;
-    border-radius: 12px;
-    padding: 1rem;
-    width: 280px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .productBox:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  }
-  
-  .productGroup {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 0.5rem;
-  }
-  
-  .productGroup img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-right: 0.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .addButton {
-    background: #ff6a00;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    text-align: center;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    font-weight: bold;
-  }
-  
-  .addButton:hover {
-    background: #e65c00;
-  }
-  
-  .productBox strong {
-    font-size: 1.2rem;
-    color: #333;
-  }
-  
-  .productBox div {
-    margin: 0.2rem 0;
-  }
-  
-  .productBox div:last-child {
-    font-size: 0.9rem;
-    color: #555;
-  }
-  
-  .addButton {
-    padding: 0.5rem 1rem;
-    background: #ff6a00;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  .addButton:hover {
-    background: #ee0979;
-  }
-  .itemSection {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
-    padding: 1rem;
-  }
-  
-  .gallery {
-    transition: transform 0.3s;
-    border-radius: 12px;
-  }
-  
-  .gallery:hover {
-    transform: scale(1.05);
-  }
-  
-  .gallery img {
-    width: 100%;
-    border-radius: 12px;
-  }
-  h3 {
-    text-align: center;
-    margin: 1rem 0;
-    font-size: 1.5rem;
-    color: #ff6a00;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  }
-  
-  .filterButtons {
+/* Filter Buttons */
+.filterButtons {
     display: flex;
     justify-content: center;
     gap: 0.5rem;
     margin: 1rem 0;
-  }
-  
-  .filterButtons button {
+}
+
+.filterButtons button {
     padding: 0.6rem 1.2rem;
     background: #f5f5f5;
     color: #333;
     border: 2px solid #ff6a00;
     border-radius: 8px;
     cursor: pointer;
+    font-weight: bold;
     transition: all 0.3s ease;
-    font-weight: bold;
-  }
-  
-  .filterButtons button:hover,
-  .activeButton {
+}
+
+.filterButtons button:hover, .activeButton {
     background: #ff6a00;
     color: white;
-  }
-  
-  .firmSection {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    padding: 1rem;
-  }
-  
-  .firmGroupBox {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 250px;
-    margin: 0.5rem;
-  }
-  
-  .firmGroupBox:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  }
-  
-  .firmGroup {
-    position: relative;
-  }
-  
-  .firmGroup img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-bottom: 2px solid #ff6a00;
-  }
-  
-  .firmOffer {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #ff6a00;
-    color: white;
-    padding: 0.3rem 0.6rem;
-    border-radius: 6px;
-    font-weight: bold;
-  }
-  
-  .firmDetails {
-    padding: 0.8rem;
-    text-align: center;
-    color: #333;
-  }
-  
-  .link {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  .zoomEffect {
-    transition: transform 0.3s ease;
-  }
-  
-  .zoomEffect:hover {
-    transform: scale(1.05);
-  }
-  .itemSection {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1.5rem;
-  background: #f4f4f4;
 }
 
-.gallery {
-  position: relative;
-  overflow: hidden;
-  width: 280px;
-  height: 400px;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .topBarSection {
+        padding: 10px 20px;
+    }
 
-.gallery:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
+    .itemSection, .productSection {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.gallery img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 12px;
-  transition: opacity 0.3s ease;
-}
-
-.gallery:hover img {
-  opacity: 0.85;
-}
-
-.gallery::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), transparent);
-  border-radius: 12px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.gallery:hover::after {
-  opacity: 1;
+    .button, .addButton, .cartButton, .buyButton {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
